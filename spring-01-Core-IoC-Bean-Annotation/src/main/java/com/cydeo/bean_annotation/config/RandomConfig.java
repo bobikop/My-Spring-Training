@@ -11,7 +11,6 @@ public class RandomConfig {
     }
 
     @Bean
-
     public Integer myInteger(){
         return 5;
     }
