@@ -14,6 +14,7 @@
         <module>spring-02-Core-IoC-Stereotype-Annotation</module>
         <module>spring-03-Wiring</module>
         <module>spring-04-Autowiring</module>
+        <module>spring-05-Core-Abstraction</module>
     </modules>
 
     <properties>
