@@ -9,12 +9,13 @@ import com.cydeo.bean_annotation.motherboardfactory.AsusMotherboard;
 import com.cydeo.bean_annotation.motherboardfactory.Motherboard;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 
 @Configuration
 public class ComputerConfig {
 
 
-    @Bean
+    @Bean(name="sony")
     public Monitor monitorSony(){
         return new SonyMonitor("25 inch beast", "Sony", 25);
     }
@@ -29,6 +30,7 @@ public class ComputerConfig {
     }
 
     @Bean
+    @Primary  // if we have multiple beans with similar or same type of opbject one with primary notation will go first
     public Monitor monitorAcer(){
         return new AcerMonitor("23 inch Beast","Acer",23);
     }

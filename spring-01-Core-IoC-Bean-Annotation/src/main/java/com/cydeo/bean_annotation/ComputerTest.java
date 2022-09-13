@@ -13,7 +13,6 @@ public class ComputerTest {
     public static void main(String[] args) {
         //Creating container by using Application Context
         ApplicationContext container = new AnnotationConfigApplicationContext(ComputerConfig.class);
-
         //Creating container by using BeanFactory
         BeanFactory context = new AnnotationConfigApplicationContext();
 
@@ -25,6 +24,18 @@ public class ComputerTest {
         PC myPc= new PC(theCase, theMonitor, theMotherboard);
 
         myPc.powerUp();
+
+
+        System.out.println("********************Multiple Objects *****************");
+
+        Monitor theMonitor2 = container.getBean("monitorSony", Monitor.class); //default bean name coming from method name form config class
+        Monitor theMonitor3 = container.getBean("ony", Monitor.class); // custom name
+
+
+
+
+
+
 
     }
 }
