@@ -37,4 +37,17 @@ public class ComputerConfig {
 
 
 
+    @Bean
+    public Case caseDell(){
+        return new DellCase("220B","Dell","240");
+    }
+
+    @Bean
+    public Motherboard motherboardAsus(){
+        return new AsusMotherboard("BJ-200","Asus",4,6,"v2.44");
+    }
+
+
+
+
 }

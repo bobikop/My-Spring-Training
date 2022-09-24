@@ -11,7 +11,7 @@ public abstract class Case {
     private String powerSupply;
 
     @Autowired
-    private Dimensions dimensions;
+    private Dimensions dimensions;  // field injection is one way to do autowiring, we can do it trough contructor
 
     public Case(String model, String manufacturer, String powerSupply) {
         this.model = model;
