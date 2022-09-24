@@ -5,6 +5,7 @@ import com.cydeo.service.CommentService;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class CydeoApplication {
@@ -25,4 +26,11 @@ public class CydeoApplication {
         commentService.printConfigData();
     }
 
-}
+    // create bean from something outside of our code
+//    @Bean
+//    public String stringBean(){
+//        return stringBean();
+
+    }
+
+
