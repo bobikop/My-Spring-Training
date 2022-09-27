@@ -8,6 +8,6 @@ public class StudentController {
 
     @RequestMapping("/student")
     public String getStudent(){
-        return "student/welcome.html";// must give it exactly same location (student folder under the static)- static ic default looking folder
+        return "student/home.html";// must give it exactly same location (student folder under the static)- static ic default looking folder
     }
 }
