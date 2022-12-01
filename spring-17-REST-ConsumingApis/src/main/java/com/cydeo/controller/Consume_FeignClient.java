@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class Consume_FeignClient {
 
-    private final UserClient userClient;
+    private final UserClient userClient;  // injection
     private final EmployeeClient employeeClient;
 
     public Consume_FeignClient(UserClient userClient, EmployeeClient employeeClient) {
@@ -20,7 +20,7 @@ public class Consume_FeignClient {
 
     @GetMapping("/api/v1/users")
     public ResponseEntity<ResponseWrapper> getUsers(){
-
+                                                                              // cal this method to show the data from url
         return ResponseEntity.ok(new ResponseWrapper("UserList Retrieved",userClient.getUsers()));
     }
 

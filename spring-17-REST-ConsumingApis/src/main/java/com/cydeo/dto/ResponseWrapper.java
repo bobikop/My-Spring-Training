@@ -10,11 +10,13 @@ import org.springframework.http.HttpStatus;
 @NoArgsConstructor
 public class ResponseWrapper {
 
+    //our custom class where we define how the json output will look (what fields to have)
     private boolean success;
     private String message;
     private Integer code;
     private Object data;
 
+    // constructor to show message and data after method is executed
     public ResponseWrapper(String message, Object data){
         this.message = message;
         this.data=data;
@@ -22,6 +24,8 @@ public class ResponseWrapper {
         this.success=true;
     }
 
+
+    // constructor to show message only ( no data after delete) operation
     public ResponseWrapper(String message){
         this.message=message;
         this.code=HttpStatus.OK.value();
