@@ -8,7 +8,7 @@ import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Component;
 
 @Component
-public class FeignClientInterceptor implements RequestInterceptor {
+public class    FeignClientInterceptor implements RequestInterceptor {
 
     private static final String AUTHORIZATION_HEADER = "Authorization";
     private static final String TOKEN_TYPE = "Bearer ";
