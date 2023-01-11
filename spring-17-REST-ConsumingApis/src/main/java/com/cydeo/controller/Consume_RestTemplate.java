@@ -31,7 +31,7 @@ public class Consume_RestTemplate {
     @GetMapping("{id}")
     public Object readUser(@PathVariable("id") Integer id){
 
-        String URL = URI + "/{id}";
+        String URL = URI + "/{id}"; // will consume only specific user
 
         return restTemplate.getForObject(URL, Object.class,id);
 

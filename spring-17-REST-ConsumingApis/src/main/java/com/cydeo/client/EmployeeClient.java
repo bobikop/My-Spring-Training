@@ -10,5 +10,5 @@ import org.springframework.web.bind.annotation.RequestHeader;
 public interface EmployeeClient {
 
     @GetMapping("/data/v1/user?limit=10")
-    Employee getEmployee(@RequestHeader("app-id") String id); // one employe or List for more than one employee
+    Employee getEmployee(@RequestHeader("app-id") String id); // one employee or List for more than one employee
 }
