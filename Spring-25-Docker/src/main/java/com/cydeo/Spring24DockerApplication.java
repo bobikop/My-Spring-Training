@@ -8,6 +8,10 @@ public class Spring24DockerApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(Spring24DockerApplication.class, args);
+
+
+
+
     }
 
 }
