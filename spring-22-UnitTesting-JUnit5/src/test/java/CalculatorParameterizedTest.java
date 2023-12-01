@@ -35,6 +35,8 @@ public class CalculatorParameterizedTest {
         return new String[]{"Java", "JS", "TS"};
     }
 
+
+    //csv stands for comma - separated value
     @ParameterizedTest
     @CsvSource({
             "10, 20, 30",
@@ -45,8 +47,14 @@ public class CalculatorParameterizedTest {
         Assertions.assertEquals(result, Calculator.add(num1, num2));
     }
 
+
+  /*
+  If we have to write a lot of test data in the test code it can make test less
+readable. One solution to this is to provide the data in an external CSV file.
+Each line from the file works as a list of parameters.
+  * */
     @ParameterizedTest
-    @CsvFileSource(resources = "/sample-data.csv", numLinesToSkip = 1)
+    @CsvFileSource(resources = "/sample-data.csv", numLinesToSkip = 1) // to skip firl line header or title num1, num2, result
     void testCase6(int num1, int num2, int result) {
         Assertions.assertEquals(result, Calculator.add(num1, num2));
     }
